@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<component name="HomeScreenGridItem" extends="Group">
+
+  <interface> 
+    <field id="itemContent" type="node" onChange="itemContentChanged"/> 
+    <field id="width" type="float" onChange="resizeImage"/>
+    <field id="height" type="float" onChange="resizeImage"/>
+    <field id="focusPercent" type="float" onChange="onFocusPercentUpdate"/>
+  </interface>
+
+  <script type="text/brightscript" uri="pkg:/components/templates/home/HomeScreenGridItem.brs" />
+
+
+  <children>
+    <LayoutGroup layoutDirection="vert" vertAlignment="top" itemSpacings="20" 
+      translation="[0,0]" >
+        <Poster id="itemImage" width="200" height="100" translation="[0,0]"/>
+    </LayoutGroup>
+  </children>
+
+</component>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="HomeScene" extends="Group"> 
+  <script type="text/brightscript" uri="pkg:/source/utils/registryUtil.brs" />
+  <script type="text/brightscript" uri="pkg:/components/templates/home/HomeScene.brs" />
+
+  <interface>
+    <field id="itemSelected" type="assocarray"/>
+    <field id="backSelected" type="boolean"/>
+  </interface>
+
+	<children>
+
+      <Poster
+          id="mainPosterImage" 
+          width="1280" 
+          height="720"
+       />
+
+       <Poster
+        id="gradient" 
+        width="1280" 
+        height="720"
+        uri="pkg:/images/gradient.png"
+      />
+
+
+      <Label 
+        id="title" 
+        text="no data"
+        maxLines="2" 
+        wrap="true"
+        font = "font:LargeBoldSystemFont"
+        width="900" 
+        height="100"
+        translation="[100,50]" 
+      />
+
+      <Label 
+        id="desc" 
+        text="no data"
+        width="550" 
+        height="80" 
+        maxLines="2" 
+        wrap="true" 
+        translation="[100,150]"
+      />
+
+      <Label 
+        id="readLaterLabel" 
+        text=""
+        width="550" 
+        translation="[660,400]"
+      />
+
+      <MarkupGrid
+        id="rowlist"
+        translation="[100,450]"
+      />
+
+      <Group id="labelListGroup" visible="false">
+
+        <Poster
+          id="readLaterImage" 
+          width="1280" 
+          height="720"
+          uri="pkg:/images/readLater.jpg"
+        />
+        <LabelList 
+          id="labelList"
+          itemSize = "[800, 82]"
+          numRows="7"
+          drawFocusFeedback="true"
+          vertFocusAnimationStyle = "floatingFocus"
+          translation = "[200,100]"
+          />
+      </Group>
+
+
+    </children>
+
+</component>

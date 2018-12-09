@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="DetailsScene" extends="Group"> 
+  <script type="text/brightscript" uri="pkg:/source/utils/registryUtil.brs" />
+  <script type="text/brightscript" uri="pkg:/components/templates/details/DetailsScene.brs" />
+
+  <interface>
+    <field id="itemDetailsData" type="assocarray"/>
+    <field id="backSelected" type="boolean"/>
+  </interface>
+
+	<children>
+
+      <Poster
+        id="mainPosterImage" 
+        width="1280" 
+        height="720"
+       />
+
+       <Poster
+        id="gradient" 
+        width="1280" 
+        height="720"
+        opacity="0.6"
+        uri="pkg:/images/gradient.png"
+      />
+
+
+      <Label 
+        id="title" 
+        text="not set"
+        maxLines="2" 
+        wrap="true"
+        font = "font:LargeBoldSystemFont"
+        width="900" 
+        height="100"
+        translation="[100,80]" 
+      />
+
+      <Label 
+        id="desc" 
+        text="not set"
+        width="1000" 
+        height="100" 
+        maxLines="4" 
+        wrap="true" 
+        translation="[150,350]"
+      />
+
+      <Button
+        id="bookmarkBtn"
+        text="not set"
+        height="90"
+        translation="[450,520]"
+      />
+    </children>
+
+</component>
